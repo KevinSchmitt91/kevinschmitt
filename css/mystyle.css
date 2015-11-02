@@ -25,14 +25,14 @@ h1{font-size:2.143em;font-weight:700}
 }
 
 .divider-small {
-    background-color:#0099FF;
+    background-color:#1773c7;
     height:2px;
     width:40px;
     margin:auto auto 20px;
 }
 
 .divider {
-    background-color:#0099FF;
+    background-color:#1773c7;
     height:2px;
     width:80px;
     margin:auto auto 20px;
@@ -40,8 +40,8 @@ h1{font-size:2.143em;font-weight:700}
 
 .btn-custom{
     background-color:transparent;
-    color:#0099FF;
-    border:2px solid #0099FF;
+    color:#1773c7;
+    border:2px solid #1773c7;
     padding:15px 20px;
     margin-top:30px;
     -webkit-transition:.35s;
@@ -50,17 +50,17 @@ h1{font-size:2.143em;font-weight:700}
 }
 
 .btn-custom:hover{
-    background-color:#0099FF;
+    background-color:#1773c7;
     color:#FFF;
-    border:2px solid #0099FF;
+    border:2px solid #1773c7;
 }
 
 
 /* NAVBAR */
 .navbar {
-    background-color: #0099FF;
+    background-color: #1773c7;
     border: none;
-    height: 75px;
+    height: 75px !important;
     -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.25);
 -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.25);
 box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.25);
@@ -69,7 +69,12 @@ box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.25);
 .navbar .navbar-nav li > a {
     color: #f8f8f8;
     letter-spacing: 0.1em;
-    padding-top: 20px;
+    height: 75px;
+    padding-top: 30px;
+}
+
+.navbar .navbar-nav li > a.active {
+    background-color: #FF6600;
 }
 
 .navbar .navbar-nav li > a:hover {
@@ -81,6 +86,27 @@ box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.25);
     padding-top: 20px;
 }
 
+.navbar .navbar-header {
+    height: 75px;
+}
+
+.navbar-default .navbar-toggle {
+    background-color: #f8f8f8;
+    margin-top: 20px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #1773c7;
+}
+
+.navbar-default .navbar-collapse {
+    background-color: #1773c7;
+}
+
+.navbar-default .navbar-collapse li > a {
+    height: 55px;
+    padding-top: 20px;
+}
 
 
 /* INTRO */
@@ -99,6 +125,16 @@ box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.25);
     background: url(../img/intro-bg.jpg)fixed no-repeat center center;
     background-size:cover;
 }
+
+@media (max-width:768px){
+    .intro-header {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        background: url(../img/intro-bg-mobile.jpg)fixed no-repeat center center;
+        background-size:cover;
+    }
+}
+    
 
 .intro-header h1 {
     font-size: 5em;
@@ -125,7 +161,7 @@ box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.25);
 .service-span {
     font-size: 5em;
     padding: 10px 0;
-    color: #0099FF;
+    color: #1773c7;
 }
 
 
@@ -230,7 +266,7 @@ figure.grid-item figcaption {
     bottom:0;
     padding:1.3em;
     height:6em;
-    background:#0099FF;
+    background:#FF6600;
     color:#FFF;
     -webkit-transition:-webkit-transform .35s;transition:transform .35s;
     -webkit-transform:translateY(120%);
@@ -290,7 +326,7 @@ figure.grid-item:hover p.icon-links a:first-child{
 
 /* FOOTER */
 footer {
-    background-color:#0099FF;
+    background-color:#1773c7;
     border-top:1px solid #E0E0E0;
     color:#F8F8F8;
     font-size:.929em;
@@ -310,6 +346,9 @@ footer a {
     transition: color 0.2s ease-in;
 }
 
+footer a:hover {
+    text-decoration: none;
+}
 /* Pulse Hearth */
 @-webkit-keyframes pulse_animation {
 	0% { -webkit-transform: scale(1); }
@@ -356,8 +395,8 @@ footer .pulse {
 
 .cl-effect-13 li > a:hover::before,
 .cl-effect-13 a:focus::before {
-	color: #fff;
-	text-shadow: 10px 0 #fff, -10px 0 #fff;
+	color: #FF6600;
+	text-shadow: 10px 0 #FF6600, -10px 0 #FF6600;
 }
 
 .cl-effect-13 li > a:hover,

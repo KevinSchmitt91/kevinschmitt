@@ -215,6 +215,62 @@ box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.25);
     margin: 0 auto;
 }
 
+/* CONTACT */
+.contact {
+	text-align: center;
+}
+
+.contact-intro p a {
+	text-decoration: none;
+}
+
+.contact h3 {
+	font-size: 1.5em;
+    color: #1773c7;
+    padding: 20px 0;
+}
+
+.contact .divider-large {
+	margin-bottom: 50px;
+}
+
+/* FORM */
+.input-group-lg {
+    margin: 50px 0;
+    font-size: .9em;
+}
+
+label {
+    margin: 10px;
+    font-size: 1.214em;
+}
+
+label i {
+	color: #1773c7;
+}
+
+.form-control {
+	border-bottom: 2px solid #1773c7;
+	transition: border-bottom-color 0.4s;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	background-color: transparent;
+	box-shadow: none;
+	border-radius: 0 !important;
+	-webkit-appearance: none !important;
+}
+
+.form-control:focus {
+	border-bottom: 2px solid #FF6600;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	background-color: transparent;
+	box-shadow: none;
+	border-radius: 0 !important;
+	-webkit-appearance: none !important;
+}
 
 /* PROJECTS */
 .recent-work {
@@ -451,5 +507,19 @@ footer .pulse {
 .cl-effect-13 li > a:hover,
 .cl-effect-13 a:focus {
 	color: #ba7700;
+}
+
+/*UNDER CONSTRUCTION */
+.constr {
+	padding-top: 150px;
+    padding-bottom: 200px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/main-bg-compressor.jpg)fixed no-repeat center center;
+    background-color: #000;       
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
 }
     

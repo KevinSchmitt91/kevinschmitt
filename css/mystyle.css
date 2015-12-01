@@ -281,6 +281,21 @@ label i {
     text-align: center;
 }
 
+/* WORK */
+.work img {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.work img {
+    max-width: 100%;
+}
+
+.work img {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
 
 figcaption {
     padding:2em;

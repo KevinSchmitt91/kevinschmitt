@@ -1,11 +1,5 @@
 <?php
-	
-	$min = 1;
-	$max = 20;
-	$number1 = rand ($min,$max);
-	$number2 = rand ($min,$max);
-	$antispam = "Was ist $number1 + $number2 ? (Anti-Spam)";
-	$erg = $number1 + $number2;
+		
 	
 	if (isset($_POST["submit"])) {
 		$name = $_POST['name'];
@@ -33,17 +27,17 @@
 			$errMessage = 'Bitte geben Sie eine Nachricht ein';
 		}
 		//Check if simple anti-bot test is correct
-		if ($human !== ($number1 + $number2)) {
-			$errHuman = 'Ihr Anti-Spam ist nicht korrekt';
+		if ($human !== 4) {
+			$errHuman = "Ihr Anti-Spam ist nicht korrekt";
 		}
-// If there are no errors, send the email
-if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
-	if (mail ($to, $subject, $body, $from)) {
-		$result='<div class="alert alert-success">Danke! Ihre Nachricht wurde verschickt!</div>';
-	} else {
-		$result='<div class="alert alert-danger">Entschuldigung, es gab einen Fehler beim senden ihrer Nachricht. Versuchen Sie es noch einmal.</div>';
-	}
-}
+		// If there are no errors, send the email
+		if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
+			if (mail ($to, $subject, $body, $from)) {
+				$result='<div class="alert alert-success">Danke! Ihre Nachricht wurde verschickt!</div>';
+			} else {
+				$result='<div class="alert alert-danger">Entschuldigung, es gab einen Fehler beim senden ihrer Nachricht. Versuchen Sie es noch einmal.</div>';
+			}
+		}
 	}
 ?>
 
@@ -135,7 +129,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
                   			<h3 class="uppercase">Nachricht schreiben</h3>
                   			<div class="divider-large"></div>
                   			<p><small>Die mit <i style="color:#1773c7; font-size: 1.5em;">*</i> gekennzeichneten Felder müssen ausgefüllt sein!</small></p>
-                  			<form method="post" action="" class="form">
+                  			<form method="post" action="contact.php" class="form">
 								<div class="text-center">
 			                        <div class="form-group">
 										<?php echo $result; ?>	
@@ -161,7 +155,7 @@ if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
 			                      <?php echo "<p class='text-danger'>$errMessage</p>";?>
 			                    </div>
 			                    <div class="input-group-lg">
-			                      <label class="pull-left" for="human"><?php echo $antispam;?> <i>*</i></label>
+			                      <label class="pull-left" for="human">Was ist 2 + 2 ? <i>*</i></label>
 			                      <input name="human" type="text" class="form-control" placeholder="Ergebnis">
 			                      <?php echo "<p class='text-danger'>$errHuman</p>";?>
 			                    </div>
